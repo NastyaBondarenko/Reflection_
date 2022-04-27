@@ -21,7 +21,7 @@ public class ReflectionTest {
     @DisplayName("Invoke Methods Without Parameters")
     public void invokeMethodsWithoutParameters() {
 
-        List listOfMethods = reflection.invokeAllMethodsWithoutParameters(classForTest);
+        List<String> listOfMethods = reflection.invokeAllMethodsWithoutParameters(classForTest);
 
         assertTrue(listOfMethods.contains("method1"));
         assertFalse(listOfMethods.contains("method2"));
@@ -32,7 +32,7 @@ public class ReflectionTest {
     @DisplayName("Invoke Methods With Signature Contains Final")
     public void invokeMethodsWithSignatureContainsFinal() {
 
-        List list = reflection.invokeMethodsWithSignatureContainsFinal(classForTest);
+        List<String> list = reflection.invokeMethodsWithSignatureContainsFinal(classForTest);
 
         assertTrue(list.contains("method3"));
         assertEquals(1, list.size());
